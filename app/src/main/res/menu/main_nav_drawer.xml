@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/nav_group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/side_nav_btn0"
+            android:icon="@drawable/profile_icon"
+            android:title="Users Profile" />
+
+        <item
+            android:id="@+id/side_nav_otherweb"
+            android:icon="@drawable/sspindia"
+            android:title="SSP India" />
+
+        <item
+            android:id="@+id/side_nav_jobs"
+            android:icon="@drawable/jobs_icon"
+            android:title="Find Jobs" />
+
+    </group>
+
+    <group
+        android:id="@+id/nav_group2"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/side_nav_btn1"
+            android:icon="@drawable/share_icon"
+            android:title="Share With Friends" />
+        <item
+            android:id="@+id/side_nav_btn2"
+            android:icon="@drawable/rateus_icon"
+            android:title="Rate Us, Motivate Us" />
+        <item
+            android:id="@+id/side_nav_btn3"
+            android:icon="@drawable/feedback"
+            android:title="Send Feedback" />
+
+    </group>
+
+    <group
+        android:id="@+id/nav_group3"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/side_nav_btn4"
+            android:icon="@drawable/logout_icon"
+            android:title="Logout" />
+
+    </group>
+
+</menu>

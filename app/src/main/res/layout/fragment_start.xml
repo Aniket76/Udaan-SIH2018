@@ -1,0 +1,144 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hackathon2018.udaan.Fragments.StartFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English"
+
+            android:backgroundTint="#ffffff"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:fontFamily="@font/josefinsans_semibold"
+            android:layout_marginRight="140dp"
+            android:gravity="center"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="हिंदी"
+            android:backgroundTint="#ffffff"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:fontFamily="@font/josefinsans_semibold"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager_walkThrough"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutDots_walkThrough"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:alpha=".5"
+        android:background="@drawable/start_fargment_shadow" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/start_fragment_txt_please"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:text="PLEASE LOGIN TO CONTINUE"
+            android:fontFamily="@font/josefinsans_regular"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <Button
+                android:id="@+id/google_login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Sign In"
+                android:backgroundTint="#ffffff"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:fontFamily="@font/josefinsans_semibold"/>
+
+            <Button
+                android:id="@+id/mail_login_btn"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_below="@+id/google_login_btn"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/josefinsans_semibold"
+                android:text="Create Account"/>
+
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/start_fragment_txt_token"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#bdbdbd" />
+
+        <TextView
+            android:id="@+id/start_fragment_txt_token"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/josefinsans_regular"
+            android:text="&quot;Technology will never replace great teachers, but technology in the hands of great teachers is transformational.&quot; - George Couros"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

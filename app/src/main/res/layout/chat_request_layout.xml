@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:id="@+id/crl_maincard_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/crl_profile_image"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="8dp"
+                android:src="@drawable/profile_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/crl_name_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:text="Username"
+                    android:textColor="#555555"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/crl_msg_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="sent you CHAT request"
+                    android:textColor="#999999"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorAccent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/crl_accept_btn"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_ripple_effect"
+                android:fontFamily="@font/josefinsans_bold"
+                android:foreground="@drawable/accept_btn_border"
+                android:text="Accept"
+                android:layout_marginBottom="8dp"
+                android:textColor="#32CD32"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/crl_decline_btn"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:background="@drawable/button_ripple_effect"
+                android:fontFamily="@font/josefinsans_bold"
+                android:foreground="@drawable/decline_btn_border"
+                android:text="Decline"
+                android:layout_marginBottom="8dp"
+                android:textColor="#FF0000"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/crl_chatRequest_btn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/button_ripple_effect"
+            android:foreground="@drawable/decline_btn_border"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:text="Cancel Chat Request"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/josefinsans_bold"
+            android:textColor="#ff0000"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

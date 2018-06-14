@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hackathon2018.udaan.Fragments.NewsFragment">
+
+    <Button
+        android:id="@+id/nf_sub_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="42dp"
+        android:layout_marginLeft="42dp"
+        android:text="Subcribe"
+        android:textSize="26sp"
+        android:fontFamily="@font/josefinsans_bold"
+        android:background="@drawable/button_ripple_effect"
+        android:foreground="@drawable/button_border"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/nf_news_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

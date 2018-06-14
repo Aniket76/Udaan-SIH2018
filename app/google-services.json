@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "617680759129",
+    "firebase_url": "https://udaan-3dd49.firebaseio.com",
+    "project_id": "udaan-3dd49",
+    "storage_bucket": "udaan-3dd49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617680759129:android:6cb42775ab2d4630",
+        "android_client_info": {
+          "package_name": "com.hackathon2018.udaan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617680759129-i53j854t26prob6oeb8apfp47re7e43m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackathon2018.udaan",
+            "certificate_hash": "92e18bb8c12622dc7254796f6e925203cf316bc5"
+          }
+        },
+        {
+          "client_id": "617680759129-d2sj84cvioj5g230pr5754hf94nk4h34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz5-dixxOUKDoyMO37VRo9EPmEr0UYnV4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617680759129-d2sj84cvioj5g230pr5754hf94nk4h34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

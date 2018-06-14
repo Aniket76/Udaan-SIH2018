@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E91E63</color>
+    <color name="colorPrimaryDark">#C2185B</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPrimaryLight">#F8BBD0</color>
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="colorIcons">#FFFFFF</color>
+    <color name="colorDivider">#BDBDBD</color>
+
+
+    <color name="inActive_nav">#9e9e9e</color>
+
+    <!-- dots active colors -->
+    <color name="dot_active">#FF4081</color>
+    <!-- dots inactive colors -->
+    <color name="dot_inactive">#cccccc</color>
+
+</resources>

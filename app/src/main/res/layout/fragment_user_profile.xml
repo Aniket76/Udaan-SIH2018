@@ -1,0 +1,799 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hackathon2018.udaan.Fragments.UserProfileFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circular_btn_shape" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfile_dp_img"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/profile_icon" />
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/userProfile_dp_img"
+                    android:layout_alignRight="@+id/userProfile_dp_img"
+                    android:background="@drawable/circular_btn_shape" />
+
+                <ImageView
+                    android:id="@+id/urerProfile_changeDp_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/userProfile_dp_img"
+                    android:layout_alignRight="@+id/userProfile_dp_img"
+                    android:padding="10dp"
+                    android:src="@drawable/edit_icon" />
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/profile_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:backgroundTint="@color/colorAccent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/urerProfile_name_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsans_bold"
+                        android:text="Display Name"
+                        android:textColor="#ffffff"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/urerProfile_about_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsans_regular"
+                        android:text="Status"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/urerProfile_personalDetails_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:padding="4dp"-->
+                        <!--android:src="@drawable/profile_icon" />-->
+
+                    <TextView
+                        android:id="@+id/urerProfile_personalDetails_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Personal Details"
+                        android:textColor="#424242"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/urerProfile_personalDetails_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="10dp"
+                        android:src="@drawable/edit_icon" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/urerProfile_aadhaarNo_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/aadhaar_icon" />
+
+                    <TextView
+                        android:id="@+id/urerProfile_aadhaarNo_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Aadhaar No"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/urerProfile_realName_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/profile_icon" />
+
+                    <TextView
+                        android:id="@+id/urerProfile_realName_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Name"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/urerProfile_email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/feedback" />
+
+                    <TextView
+                        android:id="@+id/urerProfile_email_txt"                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Email"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/urerProfile_phoneNo_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/phone_icon" />
+
+                    <TextView
+                        android:id="@+id/urerProfile_phoneNo_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Phone Number"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/urerProfile_dob_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/dob_icon" />
+
+                    <TextView
+                        android:id="@+id/urerProfile_dob_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="DOB"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/urerProfile_city_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/city_icon" />
+
+                    <TextView
+                        android:id="@+id/urerProfile_city_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="City"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+
+
+                <!--Education Section-->
+
+                <LinearLayout
+                    android:id="@+id/urerProfile_education_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:padding="4dp"-->
+                        <!--android:src="@drawable/education_icon" />-->
+
+                    <TextView
+                        android:id="@+id/urerProfile_education_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Education"
+                        android:textColor="#424242"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/urerProfile_education_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="4dp"
+                        android:src="@drawable/add_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/urerProfile_education1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/education_icon" />
+
+                    <TextView
+                        android:id="@+id/urerProfile_education1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Education Qualification added."
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/urerProfile_education2_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/education_icon" />
+
+                    <TextView
+                        android:id="@+id/urerProfile_education2_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Education 2"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+
+                <!--Work Experience Section-->
+
+                <LinearLayout
+                    android:id="@+id/userProfile_we_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:padding="4dp"-->
+                        <!--android:src="@drawable/we_icon" />-->
+
+                    <TextView
+                        android:id="@+id/userProfile_we_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Work Experience"
+                        android:textColor="#424242"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/userProfile_we_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="4dp"
+                        android:src="@drawable/add_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/userProfile_we1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/we_icon" />
+
+                    <TextView
+                        android:id="@+id/userProfile_we1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Work Experience added."
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/userProfile_we2_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/we_icon" />
+
+                    <TextView
+                        android:id="@+id/userProfile_we2_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Work Experience 2"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+
+                <!--Skills Section-->
+
+                <LinearLayout
+                    android:id="@+id/userProfile_skills_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:padding="4dp"-->
+                        <!--android:src="@drawable/skills_icon" />-->
+
+                    <TextView
+                        android:id="@+id/userProfile_skills_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Skills"
+                        android:textColor="#424242"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/userProfile_skills_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="4dp"
+                        android:src="@drawable/add_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/userProfile_skills1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/skills_icon" />
+
+                    <TextView
+                        android:id="@+id/userProfile_skills1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Skills added"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+
+
+                <!--Certifications Section-->
+
+                <LinearLayout
+                    android:id="@+id/userProfile_certifications_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:padding="4dp"-->
+                        <!--android:src="@drawable/certificate_icon" />-->
+
+                    <TextView
+                        android:id="@+id/userProfile_certifications_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Certifications"
+                        android:textColor="#424242"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/userProfile_certifications_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="4dp"
+                        android:src="@drawable/add_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/userProfile_certifications1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/certificate_icon" />
+
+                    <TextView
+                        android:id="@+id/userProfile_certifications1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Certification added"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/userProfile_certifications2_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/certificate_icon" />
+
+                    <TextView
+                        android:id="@+id/userProfile_certifications2_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Certification 2"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <!--Languages Section-->
+
+                <LinearLayout
+                    android:id="@+id/userProfile_languages_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:padding="4dp"-->
+                        <!--android:src="@drawable/language_icon" />-->
+
+                    <TextView
+                        android:id="@+id/userProfile_languages_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Languages"
+                        android:textColor="#424242"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/userProfile_languages_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="4dp"
+                        android:src="@drawable/add_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/userProfile_languages1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/language_icon" />
+
+                    <TextView
+                        android:id="@+id/userProfile_languages1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Language added"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <!--Tags Section-->
+
+                <LinearLayout
+                    android:id="@+id/userProfile_tags_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:padding="4dp"-->
+                        <!--android:src="@drawable/tags_icon" />-->
+
+                    <TextView
+                        android:id="@+id/userProfile_tags_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Tags"
+                        android:textColor="#424242"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/userProfile_tags_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="4dp"
+                        android:src="@drawable/add_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/userProfile_tags1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/tags_icon" />
+
+                    <TextView
+                        android:id="@+id/userProfile_tags1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Tags added"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorAccent"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="** Other users can't see your Personal Details **"
+                    android:textSize="16sp" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/name_udaan"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:text="&quot;Technology will never replace great teachers, but technology in the hands of great teachers is transformational.&quot; - George Couros"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

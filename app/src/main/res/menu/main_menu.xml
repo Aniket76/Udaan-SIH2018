@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_menu_search"
+        android:title="All Words"
+        android:icon="@drawable/panic_icon"
+        app:showAsAction="always"
+        />
+    <!--<item-->
+        <!--android:id="@+id/side_nav_btn2"-->
+        <!--android:title="Favourites"-->
+        <!--android:icon="@drawable/ic_star_black_24dp"-->
+        <!--/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/side_nav_btn3"-->
+        <!--android:title="My Words"-->
+        <!--android:icon="@drawable/ic_person_black_24dp"-->
+        <!--/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/side_nav_btn4"-->
+        <!--android:title="Pronunciation"-->
+        <!--android:icon="@drawable/ic_volume_up_black_24dp"-->
+        <!--/>-->
+
+</menu>

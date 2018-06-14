@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hackathon2018.udaan.Activities.OthersProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circular_btn_shape" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/otherProfile_dp_img"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/profile_icon" />
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/profile_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:backgroundTint="@color/colorAccent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/otherProfile_name_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsans_bold"
+                        android:text="Person's Name"
+                        android:textColor="#ffffff"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/otherProfile_about_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/josefinsans_regular"
+                        android:text="About"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/op_chatRequest_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/button_ripple_effect"
+                android:foreground="@drawable/button_border"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="16dp"
+                android:text="Send Chat Request"
+                android:textSize="20sp"
+                android:fontFamily="@font/josefinsans_bold"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/op_accept_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_ripple_effect"
+                    android:foreground="@drawable/accept_btn_border"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="8dp"
+                    android:text="Accept"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:textColor="#32CD32"
+                    android:visibility="gone"
+                    />
+
+                <Button
+                    android:id="@+id/op_decline_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_ripple_effect"
+                    android:foreground="@drawable/decline_btn_border"
+                    android:layout_centerHorizontal="true"
+                    android:text="Decline"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/josefinsans_bold"
+                    android:textColor="#FF0000"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical">
+
+
+                <!--Education Section-->
+
+                <TextView
+                    android:id="@+id/otherProfile_education_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:text="Education"
+                    android:textColor="#424242"
+                    android:textSize="22sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/otherProfile_education1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/education_icon" />
+
+                    <TextView
+                        android:id="@+id/otherProfile_education1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Education Qualification added."
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/otherProfile_education2_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/education_icon" />
+
+                    <TextView
+                        android:id="@+id/otherProfile_education2_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Education 2"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <!--Work Experience Section-->
+
+
+                <TextView
+                    android:id="@+id/otherProfile_we_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:text="Work Experience"
+                    android:textColor="#424242"
+                    android:textSize="22sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/otherProfile_we1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/we_icon" />
+
+                    <TextView
+                        android:id="@+id/otherProfile_we1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Work Experience added."
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/otherProfile_we2_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/we_icon" />
+
+                    <TextView
+                        android:id="@+id/otherProfile_we2_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Work Experience 2"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <!--Skills Section-->
+
+
+                <TextView
+                    android:id="@+id/otherProfile_skills_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:text="Skills"
+                    android:textColor="#424242"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:id="@+id/otherProfile_skills1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/skills_icon" />
+
+                    <TextView
+                        android:id="@+id/otherProfile_skills1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Skills added"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <!--Certifications Section-->
+
+                <TextView
+                    android:id="@+id/otherProfile_certifications_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:text="Certifications"
+                    android:textColor="#424242"
+                    android:textSize="22sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/otherProfile_certifications1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/certificate_icon" />
+
+                    <TextView
+                        android:id="@+id/otherProfile_certifications1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Certification added"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/otherProfile_certifications2_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/certificate_icon" />
+
+                    <TextView
+                        android:id="@+id/otherProfile_certifications2_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="Certification 2"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <!--Languages Section-->
+
+                <TextView
+                    android:id="@+id/otherProfile_languages_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:text="Languages"
+                    android:textColor="#424242"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:id="@+id/otherProfile_languages1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/language_icon" />
+
+                    <TextView
+                        android:id="@+id/otherProfile_languages1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Language added"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <!--Tags Section-->
+
+                <TextView
+                    android:id="@+id/otherProfile_tags_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/josefinsans_semibold"
+                    android:text="Tags"
+                    android:textColor="#424242"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:id="@+id/otherProfile_tags1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:src="@drawable/tags_icon" />
+
+                    <TextView
+                        android:id="@+id/otherProfile_tags1_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/josefinsans_semibold"
+                        android:text="No Tags added"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorAccent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/name_udaan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/josefinsans_regular"
+                    android:gravity="center"
+                    android:text="&quot;Technology will never replace great teachers, but technology in the hands of great teachers is transformational.&quot; - George Couros"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

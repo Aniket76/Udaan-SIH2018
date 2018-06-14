@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hackathon2018.udaan.Activities.ForumAnswerActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/toolbar_shape"
+        android:id="@+id/appBarLayout2">
+
+        <include
+            android:id="@+id/faa_page_toolbar"
+            layout="@layout/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/appBarLayout2"-->
+        <!--android:id="@+id/faa_question_cv"-->
+        <!--android:layout_margin="4dp"-->
+        <!--android:layout_marginBottom="0dp">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="4dp"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:paddingRight="16dp">-->
+
+
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:id="@+id/faa_profile_image"-->
+                    <!--android:layout_width="44dp"-->
+                    <!--android:layout_height="44dp"-->
+                    <!--android:padding="0dp"-->
+                    <!--android:src="@drawable/profile_icon" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginLeft="8dp"-->
+                    <!--android:layout_marginRight="8dp"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/faa_name_txt"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:fontFamily="@font/josefinsans_semibold"-->
+                        <!--android:text="Username"-->
+                        <!--android:textColor="#555555"-->
+                        <!--android:textSize="18sp" />-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/faa_added_txt"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:fontFamily="@font/josefinsans_regular"-->
+                            <!--android:text="added a question"-->
+                            <!--android:textColor="#999999"-->
+                            <!--android:textSize="16sp" />-->
+
+                        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/ell_city_txt"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_marginLeft="8dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:fontFamily="@font/josefinsans_bold"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:text="Kolkata"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textColor="#555555"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textSize="18sp" />&ndash;&gt;-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_margin="4dp"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="4dp"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<com.borjabravo.readmoretextview.ReadMoreTextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/faa_question_txt"-->
+                        <!--android:layout_marginTop="0dp"-->
+                        <!--android:fontFamily="@font/josefinsans_semibold"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="Question"-->
+                        <!--android:textSize="18sp"-->
+                        <!--app:trimExpandedText="Read more"-->
+                        <!--app:trimCollapsedText="Read less"-->
+                        <!--app:trimMode="trimModeLine"-->
+                        <!--app:trimLines="1"-->
+                        <!--/>-->
+
+                <!--</LinearLayout>-->
+
+            <!--</android.support.v7.widget.CardView>-->
+
+        <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/faa_answer_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/appBarLayout2">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/fab_add_icon"
+        android:tint="#ffffff"
+        android:elevation="6dp"
+        android:id="@+id/faa_add_fab"
+        app:pressedTranslationZ="12dp"
+        />
+
+
+</RelativeLayout>
